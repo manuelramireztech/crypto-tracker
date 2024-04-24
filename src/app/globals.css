@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+ 
+  *,
+  ::before,
+  ::after {
+    @apply dark:border-gray-200;
+    @apply border-gray-light;
+  }
+  p span {
+    color: #a1a1a1 !important;
+  }
+  .card {
+    background-color: #161b22 !important;
+  }
+
+  .dark .vertical {
+    border-left: 0.6px solid #4b5563;
+    height: 34px;
+    position:absolute;
+    margin-right: 176px;
+  }
+  .vertical {
+    border-left: 0.6px solid #eeeeee;
+    height: 34px;
+    position:absolute;
+    margin-right: 176px;
+  }
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* Typography */
+.h1 {
+  @apply text-4xl font-extrabold leading-tight tracking-tighter;
+}
+
+.h2 {
+  @apply text-3xl font-extrabold leading-tight tracking-tighter;
+}
+
+.h3 {
+  @apply text-3xl font-bold leading-tight;
+}
+
+.h4 {
+  @apply text-2xl font-bold leading-snug tracking-tight;
+}
+:root {
+  --background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+  --first: #53f;
+  --second: #4553ff;
+  --third: #4f40ff;
+  --fourth: #25ddf5;
+  --fifth: #1fa2ff;
+}
+
+/* Styles for the preloader container */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it appears above other content */
+  transition: opacity 0.5s ease; /* Smooth transition effect */
+}
+
+/* Hide the preloader when loading is false */
+.preloader.hide {
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events when hidden */
+}
+
+/* Show the preloader when loading is true */
+.preloader.show {
+  opacity: 1;
+}
+
+.bg-decoration {
+  --bg-decoration-color-1: hsl(240, 4%, 65%);
+  --bg-decoration-color-2: hsla(230, 13%, 9%, 0.4);
+  --bg-decoration-color-3: hsl(250, 84%, 54%);
+  --bg-decoration-color-4: hsl(342, 89%, 48%);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg-decoration__svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134%;
+  min-width: 1280px;
+  max-width: 1920px;
+  height: auto;
+}
+
+.bg-decoration__blending-element {
+  mix-blend-mode: overlay;
+}
+
+.scrollbar-left::-webkit-scrollbar {
+  left: 0;
+}
+
